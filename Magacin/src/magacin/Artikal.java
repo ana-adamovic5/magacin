@@ -13,25 +13,37 @@ public class Artikal {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv!=null)
 		this.naziv = naziv;
+		else
+			throw new IllegalArgumentException("Naziv ne sme biti null");
 	}
 	public int getSifra() {
 		return sifra;
 	}
 	public void setSifra(int sifra) {
+		if(sifra>0)
 		this.sifra = sifra;
+		else
+			throw new IllegalArgumentException("Sifra mora biti broj veci od nule");
 	}
 	public String getOpis() {
 		return opis;
 	}
 	public void setOpis(String opis) {
+		if(opis!=null)
 		this.opis = opis;
+		else
+			throw new IllegalArgumentException("Opis ne sme biti null");
 	}
 	public int getKolicina() {
 		return kolicina;
 	}
 	public void setKolicina(int kolicina) {
+		if(kolicina>=0)
 		this.kolicina = kolicina;
+		else
+			throw new IllegalArgumentException("Kolicina ne sme biti negativan broj");
 	}
 	@Override
 	public int hashCode() {

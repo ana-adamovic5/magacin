@@ -14,7 +14,10 @@ public class KucnaHemija extends Artikal {
 	}
 
 	public void setDatum(Date datum) {
+		if(datum!=null)
 		this.datum = datum;
+		else
+			this.datum=new Date();
 	}
 
 	@Override
